@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="bold-text">Recommendation based on QLearning</a></li>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="conditions">
+            <table>
+                <tr>
+                    <td>Climatic Conditions</td>
+                    <td>
+                        <select name="cc" id="cc">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="Hothumid">Hot and Humid</option>
+                            <option value="Hothumid">Cold and Dry</option>
+                            <option>Warm Weather</option>
+                            <option>Moderate</option>
+                            <option>All climatic</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Types of soil</td>
+                    <td>
+                        <select name="soiltype" id="soiltype">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="Loam">Loam soil</option>
+                            <option value="clay">Clay</option>
+                            <option value="Sandy">Sandy</option>
+                            <option value="Silt">Silt</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Water level from motor or ground</td>
+                    <td>
+                        <select name="wlevel" id="wlevel">
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="low">Low</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="high">High</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="inp_img_form" class="inp-form">
+            <h4>Upload an image of a leaf to diagnose the problems</h4>
+            <input type="file" id="img_file" value="">
+            <input type="button" id="submit_img" class="button" value="Diagnose">
+        </div>
+        <div id="try_again">
+        </div>
+        <div id="image_view">
+            <img id="disp" src="" height="500" style="display:none;"/>
+        </div>
+        <div id="details" style="display: none;">
+            <div id="crop_name"><b>Crop name:</b> </div>
+            <div id="disease"><b>Probable Disease(s):</b> </div>
+            <div id="treatment"><b>Treatment:</b> </div>
+        </div>
+    </div>
+</body>
+
+</html>
